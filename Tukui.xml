@@ -1,6 +1,7 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="lib/LibStub.lua"/>
-	<Script file="lib/LibSharedMedia-3.0.lua"/>
+    <Script file="lib/LibSharedMedia-3.0.lua"/>
+    <Script file="lib/LibShefkiTimer-1.0.lua"/>
 	<Script file="developer\reloadui.lua"/>
 	<Script file="developer\commands.lua"/>
 	<Script file="core\init.lua"/>
