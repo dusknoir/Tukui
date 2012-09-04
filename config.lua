@@ -11,10 +11,10 @@ C['general'] = {
 
 C['media'] = {
   -- fonts (ENGLISH, SPANISH)
-  ['font'] = [=[Interface\Addons\Tukui\medias\fonts\normal_font.ttf]=], -- general font of tukui
+  ['font'] = [=[Interface\AddOns\Tukui\medias\fonts\normal_font.ttf]=], -- general font of tukui
   ['uffont'] = [[Interface\AddOns\Tukui\medias\fonts\uf_font.ttf]], -- general font of unitframes
-  ['dmgfont'] = [[Fonts\FRIZQT__.ttf]],
-  ['namefont'] = [[Fonts\FRIZQT__.ttf]],
+  ['dmgfont'] = [[Interface\AddOns\Tukui\medias\fonts\BROKEN15.TTF]],
+  ['namefont'] = [[Interface\AddOns\Tukui\medias\fonts\normal_font.ttf]],
   ['pixelfont'] = [[Interface\Addons\Tukui\medias\fonts\pixel_font.ttf]], -- pixel font
 
   -- textures
@@ -24,8 +24,8 @@ C['media'] = {
   ['copyicon'] = [[Interface\AddOns\Tukui\medias\textures\copy]], -- copy icon
   -- ['blank'] = [[Interface\AddOns\Tukui\medias\textures\blank]], -- the main texture for all borders/panels
   ['blank'] = [[Interface\AddOns\Tukui\medias\textures\normTex]], -- the main texture for all borders/panels
-  ['bordercolor'] = { .3, .3, .3 }, -- border color of tukui panels
-  ['altbordercolor'] = { .3, .3, .3 }, -- alternative border color, mainly for unitframes text panels.
+  ['bordercolor'] = { .4, .4, .4 }, -- border color of tukui panels
+  ['altbordercolor'] = { .4, .4, .4 }, -- alternative border color, mainly for unitframes text panels.
   ['backdropcolor'] = { .1, .1, .1 }, -- background color of tukui panels
   ['datatextcolor1'] = { 1, 1, 1 }, -- color of datatext title
   ['datatextcolor2'] = { 0, 1, 0 }, -- color of datatext result
@@ -63,7 +63,7 @@ C['unitframes'] = {
   ['focustarget'] = true,                 -- show focus target?
   ['combopoints'] = nil,                  -- cp icons?
   ['t12focuslayout'] = nil,               -- use tukui v12 focus layout? note that this will remove focus target!
-
+  ['shadoworbs'] = nil,                   -- show shadow orb indicator?
    -- raid layout (if one of them is enabled)
   ['showrange'] = true,                   -- show range opacity on raidframes
   ['raidalphaoor'] = 0.6,                 -- alpha of unitframes when unit is out of range

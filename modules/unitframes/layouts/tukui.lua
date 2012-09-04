@@ -714,7 +714,7 @@ local function Shared(self, unit)
 				end
 				
 				-- priest
-				if T.myclass == "PRIEST" then
+				if T.myclass == "PRIEST" and C.unitframes.shadoworbs then
 					self.shadow:Point("TOPLEFT", -4, 12)
 					
 					local pb = CreateFrame("Frame", "TukuiShadowOrbsBar", self)

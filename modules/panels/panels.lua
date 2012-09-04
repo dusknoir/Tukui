@@ -112,6 +112,8 @@ ileftlv:SetFrameLevel(1)
 ileftlv:SetFrameStrata("BACKGROUND")
 G.Panels.BottomLeftVerticalLine = ileftlv
 
+ileftlv:Kill()
+
 -- RIGHT VERTICAL LINE
 local irightlv = CreateFrame("Frame", "TukuiInfoRightLineVertical", UIParent)
 irightlv:SetTemplate()
@@ -120,6 +122,8 @@ irightlv:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -22, 30)
 irightlv:SetFrameLevel(1)
 irightlv:SetFrameStrata("BACKGROUND")
 G.Panels.BottomRightVerticalLine = irightlv
+
+irightlv:Kill()
 
 if not C.chat.background then
 	-- CUBE AT LEFT, ACT AS A BUTTON (CHAT MENU)
@@ -160,6 +164,12 @@ if not C.chat.background then
 		end)
 	end
 	G.Panels.BottomRightCube = cuberight
+
+    for _, frame in pairs({ cubeleft, cuberight }) do
+      frame:SetAlpha(0)
+      frame:HookScript('OnEnter', function() frame:SetAlpha(1) end)
+      frame:HookScript('OnLeave', function() frame:SetAlpha(0) end)
+    end
 end
 
 -- HORIZONTAL LINE LEFT
@@ -173,6 +183,8 @@ ltoabl:SetFrameStrata("BACKGROUND")
 ltoabl:SetFrameLevel(1)
 G.Panels.BottomLeftLine = ltoabl
 
+ltoabl:Kill()
+
 -- HORIZONTAL LINE RIGHT
 local ltoabr = CreateFrame("Frame", "TukuiLineToABRight", UIParent)
 ltoabr:SetTemplate()
@@ -182,6 +194,8 @@ ltoabr:Point("BOTTOMRIGHT", irightlv, "BOTTOMRIGHT", 0, 0)
 ltoabr:SetFrameStrata("BACKGROUND")
 ltoabr:SetFrameLevel(1)
 G.Panels.BottomRightLine = ltoabr
+
+ltoabr:Kill()
 
 -- MOVE/HIDE SOME ELEMENTS IF CHAT BACKGROUND IS ENABLED
 local movechat = 0

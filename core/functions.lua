@@ -265,9 +265,14 @@ end
 --Usage T.Delay(seconds, functionToCall, ...)
 do
   local LibShefkiTimer = LibStub('LibShefkiTimer-1.0')
-  function T.Delay(delay, func, ...)
-    local function callback(dispatcher, args) return func(unpack(args)) end
-    local dispatcher, args = { callback = callback }, { ... }
+  T.Delay = function(delay, func, ...)
+    local function callback(dispatcher, args)
+      return func(unpack(args))
+    end
+
+    local dispatcher = { callback = callback }
+    local args = { ... }
+
     return LibShefkiTimer.ScheduleTimer(dispatcher, 'callback', delay, args)
   end
 end
