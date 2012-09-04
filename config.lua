@@ -73,6 +73,7 @@ C['unitframes'] = {
   ['gridhealthvertical'] = true,          -- enable vertical grow on health bar for grid mode.
   ['gridscale'] = 1,                      -- set the healing grid scaling
   ['gridvertical'] = true,                -- grid group displayed vertically
+  ['raidunitspercolumn'] = 10,            -- number or raid member show per column
   ['showraidpets'] = true,                -- show pets in raid?
   ['maxraidplayers'] = nil,               -- idk
   
