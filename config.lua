@@ -52,7 +52,7 @@ C['unitframes'] = {
   ['totdebuffs'] = nil,                   -- enable tot debuffs (high reso only)
   ['showtotalhpmp'] = true,               -- change the display of info text on player and target with XXXX/Total.
   ['showsmooth'] = true,                  -- enable smooth bar
-  ['charportrait'] = false,               -- do i really need to explain this?
+  ['charportrait'] = true,                -- do i really need to explain this?
   ['maintank'] = nil,                     -- enable maintank
   ['mainassist'] = nil,                   -- enable mainassist
   ['unicolor'] = nil,                     -- enable unicolor theme
@@ -62,24 +62,34 @@ C['unitframes'] = {
   ['onlyselfdebuffs'] = nil,              -- display only our own debuffs applied on target
   ['focustarget'] = true,                 -- show focus target?
   ['combopoints'] = nil,                  -- cp icons?
-  ['t12focuslayout'] = nil,               -- use tukui v12 focus layout? note that this will remove focus target!
   ['shadoworbs'] = nil,                   -- show shadow orb indicator?
    -- raid layout (if one of them is enabled)
+  ['raid'] = true,                        -- show raid frames
   ['showrange'] = true,                   -- show range opacity on raidframes
   ['raidalphaoor'] = 0.6,                 -- alpha of unitframes when unit is out of range
-  ['gridonly'] = nil,                     -- enable grid only mode for all healer mode raid layout.
+  ['aggro'] = true,                       -- show aggro on all raid layouts
   ['showsymbols'] = true,                 -- show symbol.
-  ['aggro'] = nil,                        -- show aggro on all raids layouts
   ['raidunitdebuffwatch'] = true,         -- track important spell to watch in pve for grid mode.
   ['gridhealthvertical'] = true,          -- enable vertical grow on health bar for grid mode.
-  ['showplayerinparty'] = nil,            -- show my player frame in party
   ['gridscale'] = 1,                      -- set the healing grid scaling
+  ['gridvertical'] = true,                -- grid group displayed vertically
+  ['showraidpets'] = true,                -- show pets in raid?
+  ['maxraidplayers'] = nil,               -- idk
   
    -- boss frames
   ['showboss'] = true,                    -- enable boss unit frames for PVELOL encounters.
-  
-   -- class bar
-  ['classbar'] = true,                    -- enable tukui classbar over player unit
+
+  -- arena frames
+  ['arena'] = true,
+
+  -- class bar
+  ['classbar'] = nil,                     -- enable tukui classbar over player
+
+  -- optional class bars
+  ['shadoworbs'] = nil,                   -- shadow orb indicator?
+  ["druidmanabar"] = true,                            -- enable druid class mana bar
+  ["druidmushroombar"] = true,                        -- enable druid class mushroom bar
+  ["mageclassbar"] = true,                            -- enable mage class arcane bar
 }
 
 C['arena'] = {
