@@ -182,7 +182,7 @@ C['chat'] = {
 
 C['tooltip'] = {
   ['enable'] = true,                      -- true to enable this mod, false to disable
-  ['hidecombat'] = nil,                   -- hide bottom-right tooltip when in combat
+  ['hidecombat'] = true,                  -- hide bottom-right tooltip when in combat
   ['hidebuttons'] = nil,                  -- always hide action bar buttons tooltip.
   ['hideuf'] = nil,                       -- hide tooltip on unitframes
   ['cursor'] = nil,                       -- tooltip via cursor only
