@@ -137,6 +137,14 @@ local UpdateAura = function(self, index)
 			local color = DebuffTypeColor[dtype or "none"]
 			self:SetBackdropBorderColor(color.r * 3/5, color.g * 3/5, color.b * 3/5)
 			self.Holder:SetBackdropBorderColor(color.r * 3/5, color.g * 3/5, color.b * 3/5)
+        else
+          if C.auras.highlight[name] then
+            self:SetBackdropBorderColor(1, 0, 1)
+            self.Holder:SetBackdropBorderColor(1, 0, 1)
+          else
+            self:SetBackdropBorderColor(unpack(C.media.bordercolor))
+            self.Holder:SetBackdropBorderColor(unpack(C.media.bordercolor))
+          end
 		end
 
 		self.Icon:SetTexture(texture)
