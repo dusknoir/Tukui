@@ -33,11 +33,9 @@ if C["datatext"].dur and C["datatext"].dur > 0 then
 		end
 		table.sort(L.Slots, function(a, b) return a[3] < b[3] end)
 		
-		if Total > 0 then
-			Text:SetText(Stat.Color2..floor(L.Slots[1][3]*100).."% |r"..Stat.Color1..L.datatext_armor.."|r")
-		else
-			Text:SetText(Stat.Color2.."100% |r"..Stat.Color1..L.datatext_armor.."|r")
-		end
+        local durability = Total == 0 and 100 or floor(L.Slots[1][3]*100)
+        Text:SetText(Stat.Color1..L.datatext_durability..Stat.Color2..durability.."%|r")
+
 		-- Setup Durability Tooltip
 		self:SetAllPoints(Text)
 		Total = 0

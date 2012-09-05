@@ -24,18 +24,12 @@ G.DataText.System.Text = Text
 local bandwidthString = "%.2f Mbps"
 local percentageString = "%.2f%%"
 
-local kiloByteString = "%d "..Stat.Color1.."kb".."|r"
-local megaByteString = "%.2f "..Stat.Color1.."mb".."|r"
+local megaByteString = Stat.Color1..L.datatext_memory..Stat.Color2.."%.1f"..Stat.Color1.."|r"
 
 local function formatMem(memory)
 	local mult = 10^1
-	if memory > 999 then
-		local mem = ((memory/1024) * mult) / mult
-		return string.format(megaByteString, mem)
-	else
-		local mem = (memory * mult) / mult
-		return string.format(kiloByteString, mem)
-	end
+    local mem = ((memory/1024) * mult) / mult
+	return string.format(megaByteString, mem)
 end
 
 local memoryTable = {}
@@ -81,7 +75,7 @@ local function Update(self, t)
 	if int < 0 then
 		RebuildAddonList(self)
 		local total = UpdateMemory()
-		Text:SetText(Stat.Color2..formatMem(total).."|r")
+		Text:SetText(formatMem(total))
 		int = 10
 	end
 end

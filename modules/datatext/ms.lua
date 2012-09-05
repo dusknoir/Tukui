@@ -28,7 +28,7 @@ if C["datatext"].ms and C["datatext"].ms > 0 then
             if ms1 == 0 then ms1 = '??' end
             if ms2 == 0 then ms2 = '??' end
 
-			Text:SetText(Stat.Color2..ms1.."|r"..Stat.Color1.." "..L.datatext_ms.." & "..Stat.Color2..ms2.."|r"..Stat.Color1.." "..L.datatext_ms.."|r")
+			Text:SetText(Stat.Color1..L.datatext_ms..Stat.Color2..ms1..Stat.Color1.." & "..Stat.Color2..ms2.."|r")
 			self:SetAllPoints(Text)
 			int = 1			
 		end	

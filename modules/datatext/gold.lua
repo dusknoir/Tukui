@@ -28,12 +28,12 @@ if C["datatext"].gold and C["datatext"].gold > 0 then
 		local silver = mod(floor(math.abs(money) / 100), 100)
 		local copper = mod(floor(math.abs(money)), 100)
 		if gold ~= 0 then
-			return format(Stat.Color2.."%s|r"..L.goldabbrev..Stat.Color2.." %s|r"..L.silverabbrev..Stat.Color2.." %s|r"..L.copperabbrev, gold, silver, copper)
+			return Stat.Color1..L.datatext_gold..Stat.Color2..gold.."|r"
 		elseif silver ~= 0 then
-			return format(Stat.Color2.."%s|r"..L.silverabbrev..Stat.Color2.." %s|r"..L.copperabbrev, silver, copper)
+			return Stat.Color1..L.datatext_silver..Stat.Color2..silver.."|r"
 		else
-			return format(Stat.Color2.."%s|r"..L.copperabbrev, copper)
-		end
+			return Stat.Color1..L.datatext_copper..Stat.Color2..copper.."|r"
+        end
 	end
 
 	local function FormatTooltipMoney(money)
