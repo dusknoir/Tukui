@@ -24,10 +24,10 @@ C['media'] = {
   ['copyicon'] = [[Interface\AddOns\Tukui\medias\textures\copy]], -- copy icon
   -- ['blank'] = [[Interface\AddOns\Tukui\medias\textures\blank]], -- the main texture for all borders/panels
   ['blank'] = [[Interface\AddOns\Tukui\medias\textures\normTex]], -- the main texture for all borders/panels
-  ['bordercolor'] = { .3, .3, .3 }, -- border color of tukui panels
-  ['altbordercolor'] = { .35, .35, .35 }, -- alternative border color, mainly for unitframes text panels.
-  ['backdropcolor'] = { .05, .05, .05 }, -- background color of tukui panels
-  ['datatextcolor1'] = { .85, .85, .85 }, -- color of datatext title
+  ['bordercolor'] = { .4, .4, .4 }, -- border color of tukui panels
+  ['altbordercolor'] = { .4, .4, .4 }, -- alternative border color, mainly for unitframes text panels.
+  ['backdropcolor'] = { .075, .075, .075 }, -- background color of tukui panels
+  ['datatextcolor1'] = { .95, .95, .95 }, -- color of datatext title
   ['datatextcolor2'] = { 1, .2, 1 }, -- color of datatext result
   ['buttonhover'] = [[Interface\AddOns\Tukui\medias\textures\button_hover]],
   
