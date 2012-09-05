@@ -1045,12 +1045,12 @@ end
 
 -- position of indicators
 T.countOffsets = {
-	TOPLEFT = {6*C["unitframes"].gridscale, 1},
-	TOPRIGHT = {-6*C["unitframes"].gridscale, 1},
-	BOTTOMLEFT = {6*C["unitframes"].gridscale, 1},
-	BOTTOMRIGHT = {-6*C["unitframes"].gridscale, 1},
-	LEFT = {6*C["unitframes"].gridscale, 1},
-	RIGHT = {-6*C["unitframes"].gridscale, 1},
+	TOPLEFT = {6, 1},
+	TOPRIGHT = {-6, 1},
+	BOTTOMLEFT = {6, 1},
+	BOTTOMRIGHT = {-6, 1},
+	LEFT = {6, 1},
+	RIGHT = {-6, 1},
 	TOP = {0, 0},
 	BOTTOM = {0, 0},
 }

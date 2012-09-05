@@ -173,6 +173,8 @@ modules\blizzard\mirror.lua
 modules\unitframes\templates\tankassist.xml
 modules\unitframes\tags\tags.lua
 modules\unitframes\layouts\tukui.lua
+modules\unitframes\layouts\big.lua
+modules\unitframes\layouts\small.lua
 
 modules\misc\altpowerbar.lua
 modules\misc\threatbar.lua

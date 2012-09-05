@@ -62,20 +62,12 @@ C['unitframes'] = {
   ['onlyselfdebuffs'] = nil,              -- display only our own debuffs applied on target
   ['focustarget'] = true,                 -- show focus target?
   ['combopoints'] = nil,                  -- cp icons?
-  ['shadoworbs'] = nil,                   -- show shadow orb indicator?
    -- raid layout (if one of them is enabled)
   ['raid'] = true,                        -- show raid frames
   ['showrange'] = true,                   -- show range opacity on raidframes
   ['raidalphaoor'] = 0.6,                 -- alpha of unitframes when unit is out of range
   ['aggro'] = true,                       -- show aggro on all raid layouts
   ['showsymbols'] = true,                 -- show symbol.
-  ['raidunitdebuffwatch'] = true,         -- track important spell to watch in pve for grid mode.
-  ['gridhealthvertical'] = true,          -- enable vertical grow on health bar for grid mode.
-  ['gridscale'] = 1,                      -- set the healing grid scaling
-  ['gridvertical'] = true,                -- grid group displayed vertically
-  ['raidunitspercolumn'] = 10,            -- number or raid member show per column
-  ['showraidpets'] = true,                -- show pets in raid?
-  ['maxraidplayers'] = nil,               -- idk
   
    -- boss frames
   ['showboss'] = true,                    -- enable boss unit frames for PVELOL encounters.
