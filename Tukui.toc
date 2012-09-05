@@ -10,6 +10,7 @@
 ## Website: www.tukui.org
 
 lib\LibStub.lua
+lib\CallbackHandler-1.0.lua
 lib\LibSharedMedia-3.0.lua
 lib\LibShefkiTimer-1.0.lua
 lib\oUF\oUF.xml
