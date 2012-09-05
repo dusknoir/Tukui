@@ -93,6 +93,7 @@ modules\loot\merchant.lua
 modules\blizzard\error.lua
 
 modules\chat\copyurl.lua
+modules\chat\autohide.lua
 
 modules\tooltip\itemidcount.lua
 
