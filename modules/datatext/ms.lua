@@ -1,27 +1,37 @@
 local T, C, L, G = unpack(select(2, ...)) 
 
 --------------------------------------------------------------------
--- FPS
+-- MS / latency
 --------------------------------------------------------------------
 
-if C["datatext"].fps and C["datatext"].fps > 0 then
-	local Stat = CreateFrame("Frame", "TukuiStatFPS")
-	Stat:SetFrameStrata("BACKGROUND")	
-	Stat:SetFrameLevel(3)
+if C["datatext"].ms and C["datatext"].ms > 0 then
+	local Stat = CreateFrame("Frame", "TukuiStatMS")
+	Stat:SetFrameStrata("BACKGROUND")
+    Stat:SetFrameLevel(3)
 	Stat:EnableMouse(true)
-	Stat.Option = C.datatext.fps
+	Stat.Option = C.datatext.ms
 	Stat.Color1 = T.RGBToHex(unpack(C.media.datatextcolor1))
 	Stat.Color2 = T.RGBToHex(unpack(C.media.datatextcolor2))
-	G.DataText.FPS = Stat
+	G.DataText.MS = Stat
 
-	local Text  = Stat:CreateFontString("TukuiStatFPSText", "OVERLAY")
+	local Text  = Stat:CreateFontString("TukuiStatMSText", "OVERLAY")
 	Text:SetFont(C.media.font, C["datatext"].fontsize)
-	T.DataTextPosition(C["datatext"].fps, Text)
-	G.DataText.FPS.Text = Text
+	T.DataTextPosition(C["datatext"].ms, Text)
+	G.DataText.MS.Text = Text
 
+	local int = 1
 	local function Update(self, t)
-		Text:SetText(Stat.Color2..floor(GetFramerate()).."|r "..Stat.Color1..L.datatext_fps.."|r")
-		self:SetAllPoints(Text)
+		int = int - t
+		if int < 0 then
+			local _, _, ms1, ms2 = GetNetStats()
+
+            if ms1 == 0 then ms1 = '??' end
+            if ms2 == 0 then ms2 = '??' end
+
+			Text:SetText(Stat.Color2..ms1.."|r"..Stat.Color1.." "..L.datatext_ms.." & "..Stat.Color2..ms2.."|r"..Stat.Color1.." "..L.datatext_ms.."|r")
+			self:SetAllPoints(Text)
+			int = 1			
+		end	
 	end
 	
 	Stat:SetScript("OnUpdate", Update) 

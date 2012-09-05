@@ -137,12 +137,13 @@ C['cooldown'] = {
 }
 
 C['datatext'] = {
-  ['fps_ms'] = 2,
+  ['fps'] = 1,
+  ['ms'] = 2,
   ['regen'] = 0,                          -- show spirit regen on panels
   ['system'] = 3,                         -- show total memory and others systems infos on panels
   ['bags'] = 5,                           -- show space used in bags on panels
   ['gold'] = 6,                           -- show your current gold on panels
-  ['wowtime'] = 1,                        -- show time on panels
+  ['wowtime'] = 0,                        -- show time on panels
   ['guild'] = 0,                          -- show number on guildmate connected on panels
   ['dur'] = 4,                            -- show your equipment durability on panels.
   ['friends'] = 0,                        -- show number of friends connected.

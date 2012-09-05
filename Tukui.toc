@@ -118,6 +118,7 @@ modules\datatext\crit.lua
 modules\datatext\dps.lua
 modules\datatext\durability.lua
 modules\datatext\fps.lua
+modules\datatext\ms.lua
 modules\datatext\friend.lua
 modules\datatext\gold.lua
 modules\datatext\guild.lua
