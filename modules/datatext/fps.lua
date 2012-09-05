@@ -25,17 +25,4 @@ if C["datatext"].fps and C["datatext"].fps > 0 then
 	end
 	
 	Stat:SetScript("OnUpdate", Update) 
-	Stat:SetScript("OnEnter", function(self)
-		if not InCombatLockdown() then
-			local anchor, panel, xoff, yoff = T.DataTextTooltipAnchor(Text)
-			local _, _, latencyHome, latencyWorld = GetNetStats()
-			local latency = format(MAINMENUBAR_LATENCY_LABEL, latencyHome, latencyWorld)
-			GameTooltip:SetOwner(panel, anchor, xoff, yoff)
-			GameTooltip:ClearLines()
-			GameTooltip:AddLine(latency)
-			GameTooltip:Show()
-		end
-	end)	
-	Stat:SetScript("OnLeave", function() GameTooltip:Hide() end)	
-	Update(Stat, 10)
 end
