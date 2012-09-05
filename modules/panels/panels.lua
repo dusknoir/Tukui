@@ -299,7 +299,7 @@ end
 if C["datatext"].battleground == true then
 	local bgframe = CreateFrame("Frame", "TukuiInfoLeftBattleGround", UIParent)
 	bgframe:SetTemplate()
-	bgframe:SetAllPoints(ileft)
+	bgframe:SetAllPoints(iright) -- i guess this should be called TukuiInfoRight[...]
 	bgframe:SetFrameStrata("LOW")
 	bgframe:SetFrameLevel(0)
 	bgframe:EnableMouse(true)
