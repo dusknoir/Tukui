@@ -67,23 +67,3 @@ G.Misc.UIHider = UIHider
 local PetBattleHider = CreateFrame("Frame", "TukuiPetBattleHider", UIParent, "SecureHandlerStateTemplate");
 PetBattleHider:SetAllPoints(UIParent)
 RegisterStateDriver(PetBattleHider, "visibility", "[petbattle] hide; show")
-
--- Credits is important! (please do not edit this, thank you!)
-T.Credits = {
-	"Azilroka",
-	"Caith",
-	"Ishtara",
-	"Hungtar",
-	"Tulla",
-	"P3lim",
-	"Alza",
-	"Roth",
-	"Tekkub",
-	"Shestak",
-	"Caellian",
-	"Haleth",
-	"Nightcracker",
-	"Haste",
-	"Hydra",
-	"Elv",
-}
