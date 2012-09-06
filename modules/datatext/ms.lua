@@ -23,12 +23,11 @@ if C["datatext"].ms and C["datatext"].ms > 0 then
 	local function Update(self, t)
 		int = int - t
 		if int < 0 then
-			local _, _, ms1, ms2 = GetNetStats()
+			local _, _, ms = GetNetStats()
 
-            if ms1 == 0 then ms1 = '??' end
-            if ms2 == 0 then ms2 = '??' end
+            if ms == 0 then ms = '??' end
 
-			Text:SetText(Stat.Color1..L.datatext_ms..Stat.Color2..ms1..Stat.Color1.." & "..Stat.Color2..ms2.."|r")
+			Text:SetText(Stat.Color1..L.datatext_ms..Stat.Color2..ms..Stat.Color1..L.datatext_ms_suffix)
 			self:SetAllPoints(Text)
 			int = 1			
 		end	

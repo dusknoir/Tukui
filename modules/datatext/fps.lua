@@ -20,7 +20,7 @@ if C["datatext"].fps and C["datatext"].fps > 0 then
 	G.DataText.FPS.Text = Text
 
 	local function Update(self, t)
-		Text:SetText(Stat.Color1..L.datatext_fps..Stat.Color2..floor(GetFramerate()).."|r ")
+		Text:SetText(Stat.Color1..L.datatext_fps..Stat.Color2..floor(GetFramerate())..Stat.Color1..L.datatext_fps_suffix)
 		self:SetAllPoints(Text)
 	end
 	

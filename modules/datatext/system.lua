@@ -24,7 +24,7 @@ G.DataText.System.Text = Text
 local bandwidthString = "%.2f Mbps"
 local percentageString = "%.2f%%"
 
-local megaByteString = Stat.Color1..L.datatext_memory..Stat.Color2.."%.1f"..Stat.Color1.."|r"
+local megaByteString = Stat.Color1..L.datatext_memory..Stat.Color2.."%.1f"..Stat.Color1.." MB"
 
 local function formatMem(memory)
 	return string.format(megaByteString, memory / 1024)
