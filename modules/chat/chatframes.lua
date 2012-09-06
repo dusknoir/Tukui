@@ -118,8 +118,9 @@ local function SetChatStyle(frame)
 	_G[chat]:SetFading(false)
 	
 	-- set min height/width to original tukui size
-	_G[chat]:SetMinResize(371,111)
-	_G[chat]:SetMinResize(T.InfoLeftRightWidth + 1,111)
+	_G[chat]:SetMinResize(371,100)
+	_G[chat]:SetMinResize(T.InfoLeftRightWidth + 1,100)
+    _G[chat]:SetHeight(100)
 	
 	-- move the chat edit box
 	G.Chat.EditBox = _G[chat.."EditBox"]

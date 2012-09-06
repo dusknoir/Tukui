@@ -27,9 +27,11 @@ local percentageString = "%.2f%%"
 local megaByteString = Stat.Color1..L.datatext_memory..Stat.Color2.."%.1f"..Stat.Color1.."|r"
 
 local function formatMem(memory)
-	local mult = 10^1
-    local mem = ((memory/1024) * mult) / mult
-	return string.format(megaByteString, mem)
+	return string.format(megaByteString, memory / 1024)
+end
+
+local function formatMemShort(memory)
+    return string.format('%d KB', memory)
 end
 
 local memoryTable = {}
@@ -95,13 +97,13 @@ Stat:SetScript("OnEnter", function(self)
 			GameTooltip:AddLine(" ")
 		end
 		local totalMemory = UpdateMemory()
-		GameTooltip:AddDoubleLine(L.datatext_totalmemusage, formatMem(totalMemory), 0.69, 0.31, 0.31,0.84, 0.75, 0.65)
+		GameTooltip:AddDoubleLine(L.datatext_totalmemusage, formatMemShort(totalMemory), 0.69, 0.31, 0.31,0.84, 0.75, 0.65)
 		GameTooltip:AddLine(" ")
 		for i = 1, #memoryTable do
 			if (memoryTable[i][4]) then
 				local red = memoryTable[i][3] / totalMemory
 				local green = 1 - red
-				GameTooltip:AddDoubleLine(memoryTable[i][2], formatMem(memoryTable[i][3]), 1, 1, 1, red, green + .5, 0)
+				GameTooltip:AddDoubleLine(memoryTable[i][2], formatMemShort(memoryTable[i][3]), 1, 1, 1, red, green + .5, 0)
 			end						
 		end
 		GameTooltip:Show()
