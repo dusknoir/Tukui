@@ -261,20 +261,24 @@ T.CheckRole = function()
 	return role
 end
 
---Add time before calling a function
---Usage T.Delay(seconds, functionToCall, ...)
-do
-  local LibShefkiTimer = LibStub('LibShefkiTimer-1.0')
-  T.Delay = function(delay, func, ...)
-    local function callback(dispatcher, args)
-      return func(unpack(args))
-    end
+local LibShefkiTimer = LibStub('LibShefkiTimer-1.0')
 
-    local dispatcher = { callback = callback }
-    local args = { ... }
+T.Delay = function(delay, func, ...)
+  local function callback(dispatcher, args) return func(unpack(args)) end
 
-    return LibShefkiTimer.ScheduleTimer(dispatcher, 'callback', delay, args)
-  end
+  local dispatcher = { callback = callback }
+  local args = { ... }
+
+  return LibShefkiTimer.ScheduleTimer(dispatcher, 'callback', delay, args)
+end
+
+T.DelayRepeating = function(delay, func, ...)
+  local function callback(dispatcher, args) return func(unpack(args)) end
+
+  local dispatcher = { callback = callback }
+  local args = { ... }
+
+  return LibShefkiTimer.ScheduleRepeatingTimer(dispatcher, 'callback', delay, args)
 end
 
 ------------------------------------------------------------------------
