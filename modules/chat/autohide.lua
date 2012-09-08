@@ -7,7 +7,7 @@ local manager = CreateFrame('frame')
 ChatFrame1:SetAlpha(0)
 
 local function show()
-  timer = 4
+  timer = 3
 
   ChatFrame1:SetAlpha(1)
   manager:Show()
